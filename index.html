@@ -26,7 +26,7 @@
         <label class="block text-sm font-medium mb-1" for="tutor">Tutor</label>
         <input type="text" id="tutor" name="TUTOR" required 
                placeholder="Ejemplo: Juan Pérez"
-               class="w-full rounded-xl border-slate-300" />
+               class="w-full rounded-xl border-slate-300 px-3 py-2 text-base" />
       </div>
 
       <!-- CORREO INSTITUCIONAL -->
@@ -34,7 +34,7 @@
   <label class="block text-sm font-medium mb-1" for="correo">Correo Institucional</label>
   <input type="email" id="correo" name="CORREO" required
          placeholder="ejemplo@sacooliveros.edu.pe"
-         class="w-full rounded-xl border-slate-300" />
+         class="w-full rounded-xl border-slate-300 px-3 py-2 text-base placeholder-gray-400" />
   <p id="errorCorreo" class="text-red-500 text-sm hidden">
     ⚠️ Solo se permite correo institucional @sacooliveros.edu.pe
   </p>
@@ -44,14 +44,14 @@
       <div>
         <label class="block text-sm font-medium mb-1" for="fecha">Fecha</label>
         <input type="date" id="fecha" name="FECHA" required 
-               class="w-full rounded-xl border-slate-300" />
+               class="w-full rounded-xl border-slate-300 px-3 py-2 text-base" />
       </div>
 
 
       <!-- SEDE -->
       <div>
         <label class="block text-sm font-medium mb-1" for="sede">Sede</label>
-        <select id="sede" name="SEDE" required class="w-full rounded-xl border-slate-300">
+        <select id="sede" name="SEDE" required class="w-full rounded-xl border-slate-300 px-3 py-2 text-base">
           <option value="">Seleccionar Sede</option>
           <option>AREQUIPA</option>
           <option>BARRANCO</option>
@@ -108,7 +108,7 @@
       <!-- TURNO -->
       <div>
         <label class="block text-sm font-medium mb-1" for="turno">Turno</label>
-        <select id="turno" name="TURNO" required class="w-full rounded-xl border-slate-300">
+        <select id="turno" name="TURNO" required class="w-full rounded-xl border-slate-300 px-3 py-2 text-base">
           <option value="">Seleccionar Turno</option>
           <option>Mañana</option>
           <option>Tarde</option>
@@ -118,7 +118,7 @@
       <!-- GRADO -->
       <div>
         <label class="block text-sm font-medium mb-1" for="grado">Grado</label>
-        <select id="grado" name="GRADO" required class="w-full rounded-xl border-slate-300">
+        <select id="grado" name="GRADO" required class="w-full rounded-xl border-slate-300 px-3 py-2 text-base">
           <option value="">Seleccionar Grado</option>
           <option>1°</option>
           <option>2°</option>
@@ -133,19 +133,19 @@
       <!-- AULA -->
       <div>
         <label class="block text-sm font-medium mb-1" for="aula">Aula</label>
-        <input type="text" id="aula" name="AULA" required placeholder="Ejemplo: Aula 101" class="w-full rounded-xl border-slate-300" />
+        <input type="text" id="aula" name="AULA" required placeholder="Ejemplo: Aula 101" class="w-full rounded-xl border-slate-300 px-3 py-2 text-base placeholder-gray-400" />
       </div>
 
       <!-- CANTIDAD DE ESTUDIANTES -->
       <div>
         <label class="block text-sm font-medium mb-1" for="cantidad_estudiantes">Cantidad de estudiantes</label>
-        <input type="number" id="cantidad_estudiantes" name="CANTIDAD_ESTUDIANTES" required placeholder="Ejemplo: 30" class="w-full rounded-xl border-slate-300" />
+        <input type="number" id="cantidad_estudiantes" name="CANTIDAD_ESTUDIANTES" required placeholder="Ejemplo: 30" class="w-full rounded-xl border-slate-300 px-3 py-2 text-base placeholder-gray-400" />
       </div>
 
       <!-- SESIÓN -->
       <div>
         <label class="block text-sm font-medium mb-1">Sesión de Clase</label>
-        <select id="reviso" name="sesion" required class="w-full rounded-xl border-slate-300">
+        <select id="reviso" name="sesion" required class="w-full rounded-xl border-slate-300 px-3 py-2 text-base">
           <option value="">Seleccionar</option>
           <option>Sesión 1</option>
           <option>Sesión 2</option>
@@ -153,12 +153,12 @@
       </div>
 
       <!-- DOCENTE -->
-      <div> <label class="block text-sm font-medium mb-1" for="docente">Docente</label> <input list="docentes" id="docente" name="DOCENTE" required class="w-full rounded-xl border-slate-300 dark:border-slate-700 dark:bg-zinc-900/60" placeholder="Escriba nombre o apellido…" /> <datalist id="docentes"> <option value="MANSILLA PÉREZ VILMA"></option> <option value="ALDAZÁBAL VALENZUELA SHIRLEY"></option> <option value="CAVALCANTI CASTILLO JEANE"></option> <option value="BULEJE CERNA FERGIE"></option> <option value="MAURIOLA GUTIERREZ JIMENA ROCIO"></option> <option value="SALAS CIEZA ANDREA CHRISTINA"></option> <option value="VIGIL TRELLES LUIS ALFREDO"></option> <option value="RAMOS GONZALES JUAN"></option> <option value="SOTO HIDALGO NANCY NELLY"></option> <option value="VÉLIZ ACOSTA MIRELLA"></option> <option value="QUISPE UGARTE ADRIANA"></option> <option value="BARBOZA DIETZ RONALD ANTONIO"></option> <option value="BRICEÑO SALAS KARIN"></option> <option value="ÁVALOS HUAPAYA MARÍA"></option> <option value="SOLIER PALOMINO, RAFAEL"></option> <option value="VALDEZ LEON ELIEZER EFRAIN"></option> <option value="CHUJUTALLI SABOYA KENY"></option> <option value="REFULIO QUISPE MARCO"></option> <option value="ACUÑA ARBAIZA JOSÉ"></option> <option value="PARIONA MENDOZA MARCO ANTONIO"></option> <option value="COPITAN HUANCHACO ANDY ANDRES"></option> <option value="CHINCHAY GUZMÁN MARILÚ"></option> <option value="VILLAVICENCIO RODRÍGUEZ DAISSY"></option> <option value="PURIZACA LUCANO GIOVANNA"></option> <option value="SANDOVAL NUÑEZ KAREN LIZBETH"></option> <option value="VALDIVIA GALARZA GRACE"></option> <option value="GALVAN HERVIAS JOSE LUIS"></option> <option value="NORIEGA CARDENAS YURY YESENNIA"></option> <option value="PALOMINO ORTIZ JANISSE LIZETTE"></option> <option value="BARRETO GONZALES RONNY"></option> <option value="CHILLCCE IBARRA ANTHONY"></option> <option value="RENGIFO GUERRA NATANAEL"></option> <option value="ARRATIA QUISPE FLORENTINA"></option> <option value="HUARINGA HUARINGA MIRIAM"></option> <option value="MARTÍNEZ TAPIA PAOLA"></option> <option value="VIVANCO ARBULU MARIELLA ROCIO"></option> <option value="SANCHEZ OQUENDO JHON JAIRO"></option> <option value="SIXI LÓPEZ YULIANA DANIA"></option> <option value="CASTRO PEREZ KARLA SHARON"></option> <option value="CHIRINOS LUCERO STEPHANIE"></option> <option value="ARTICA APACLLA LILIANA DE LOS ANGELES"></option> <option value="GENG QUIQUIN MARIA ISABEL"></option> <option value="CURICÓ GONZALES ENRIQUE"></option> <option value="VALDIVIA GARCES DE DAVILA LILIAN JANET"></option> <option value="MENDIETA FUENTES KIARA CAROLINA"></option> <option value="ROCCA VILLARREAL FERNANDO ALEXIS"></option> <option value="TUME GUARDIA DORA"></option> <option value="ESPIRITU INGA ALVARO JESUS"></option> <option value="CONTRERAS ÑAHUI WHITNNEY ROSA"></option> <option value="PURILLA PINEDO RENSO ALEXIS"></option> <option value="ARAUCO ZUÑIGA JULY ROSARIO"></option> <option value="MAURIOLA ACOSTA IRIS"></option> </datalist> </div>
+      <div> <label class="block text-sm font-medium mb-1" for="docente">Docente</label> <input list="docentes" id="docente" name="DOCENTE" required class="w-full rounded-xl border-slate-300 px-3 py-2 text-base placeholder-gray-400" placeholder="Escriba nombre o apellido…" /> <datalist id="docentes"> <option value="MANSILLA PÉREZ VILMA"></option> <option value="ALDAZÁBAL VALENZUELA SHIRLEY"></option> <option value="CAVALCANTI CASTILLO JEANE"></option> <option value="BULEJE CERNA FERGIE"></option> <option value="MAURIOLA GUTIERREZ JIMENA ROCIO"></option> <option value="SALAS CIEZA ANDREA CHRISTINA"></option> <option value="VIGIL TRELLES LUIS ALFREDO"></option> <option value="RAMOS GONZALES JUAN"></option> <option value="SOTO HIDALGO NANCY NELLY"></option> <option value="VÉLIZ ACOSTA MIRELLA"></option> <option value="QUISPE UGARTE ADRIANA"></option> <option value="BARBOZA DIETZ RONALD ANTONIO"></option> <option value="BRICEÑO SALAS KARIN"></option> <option value="ÁVALOS HUAPAYA MARÍA"></option> <option value="SOLIER PALOMINO, RAFAEL"></option> <option value="VALDEZ LEON ELIEZER EFRAIN"></option> <option value="CHUJUTALLI SABOYA KENY"></option> <option value="REFULIO QUISPE MARCO"></option> <option value="ACUÑA ARBAIZA JOSÉ"></option> <option value="PARIONA MENDOZA MARCO ANTONIO"></option> <option value="COPITAN HUANCHACO ANDY ANDRES"></option> <option value="CHINCHAY GUZMÁN MARILÚ"></option> <option value="VILLAVICENCIO RODRÍGUEZ DAISSY"></option> <option value="PURIZACA LUCANO GIOVANNA"></option> <option value="SANDOVAL NUÑEZ KAREN LIZBETH"></option> <option value="VALDIVIA GALARZA GRACE"></option> <option value="GALVAN HERVIAS JOSE LUIS"></option> <option value="NORIEGA CARDENAS YURY YESENNIA"></option> <option value="PALOMINO ORTIZ JANISSE LIZETTE"></option> <option value="BARRETO GONZALES RONNY"></option> <option value="CHILLCCE IBARRA ANTHONY"></option> <option value="RENGIFO GUERRA NATANAEL"></option> <option value="ARRATIA QUISPE FLORENTINA"></option> <option value="HUARINGA HUARINGA MIRIAM"></option> <option value="MARTÍNEZ TAPIA PAOLA"></option> <option value="VIVANCO ARBULU MARIELLA ROCIO"></option> <option value="SANCHEZ OQUENDO JHON JAIRO"></option> <option value="SIXI LÓPEZ YULIANA DANIA"></option> <option value="CASTRO PEREZ KARLA SHARON"></option> <option value="CHIRINOS LUCERO STEPHANIE"></option> <option value="ARTICA APACLLA LILIANA DE LOS ANGELES"></option> <option value="GENG QUIQUIN MARIA ISABEL"></option> <option value="CURICÓ GONZALES ENRIQUE"></option> <option value="VALDIVIA GARCES DE DAVILA LILIAN JANET"></option> <option value="MENDIETA FUENTES KIARA CAROLINA"></option> <option value="ROCCA VILLARREAL FERNANDO ALEXIS"></option> <option value="TUME GUARDIA DORA"></option> <option value="ESPIRITU INGA ALVARO JESUS"></option> <option value="CONTRERAS ÑAHUI WHITNNEY ROSA"></option> <option value="PURILLA PINEDO RENSO ALEXIS"></option> <option value="ARAUCO ZUÑIGA JULY ROSARIO"></option> <option value="MAURIOLA ACOSTA IRIS"></option> </datalist> </div>
 
       <!-- REVISÓ LA ACTIVIDAD -->
       <div>
         <label class="block text-sm font-medium mb-1">¿Revisó la actividad?</label>
-        <select id="reviso" name="REVISO" required class="w-full rounded-xl border-slate-300">
+        <select id="reviso" name="REVISO" required class="w-full rounded-xl border-slate-300 px-3 py-2 text-base">
           <option value="">Seleccionar</option>
           <option>Sí</option>
           <option>No</option>
@@ -168,13 +168,13 @@
       <!-- CANTIDAD REALIZARON -->
       <div>
         <label class="block text-sm font-medium mb-1" for="cantidad_realizaron">Cantidad de estudiantes que realizaron la actividad</label>
-        <input type="number" id="cantidad_realizaron" name="CANTIDAD_REALIZARON" required placeholder="Ejemplo: 25" class="w-full rounded-xl border-slate-300" />
+        <input type="number" id="cantidad_realizaron" name="CANTIDAD_REALIZARON" required placeholder="Ejemplo: 25" class="w-full rounded-xl border-slate-300 px-3 py-2 text-base placeholder-gray-400" />
       </div>
 
       <!-- PORCENTAJE AUTO -->
       <div>
         <label class="block text-sm font-medium mb-1" for="porcentaje">% de estudiantes que realizaron la actividad</label>
-        <input type="text" id="porcentaje" name="PORCENTAJE" readonly class="w-full bg-gray-100 rounded-xl border-slate-300" />
+        <input type="text" id="porcentaje" name="PORCENTAJE" readonly class="w-full bg-gray-100 rounded-xl border-slate-300 px-3 py-2 text-base" />
       </div>
 
       <!-- BOTÓN -->
