@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Semanal de Actividades de Ingles</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body class="bg-gradient-to-r from-green-200 to-blue-200 min-h-screen flex items-center justify-center p-6">
+      
+  <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-3xl">
+    <h1 class="text-3xl font-bold text-center text-green-600 mb-6">Registro Semanal de Actividades de Ingles</h1>
+
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4 rounded-xl">
+  <p class="font-semibold">📌 Importante:</p>
+  <p>
+    El registro debe realizarse el <strong>mismo día de la clase</strong>, ya que la información se tomará en función de la fecha correspondiente.
+  </p>
+</div>
+    
+    <form id="actividadForm" ethod="POST" class="space-y-6">
+
+            <!-- NOMBRE DEL TUTOR -->
+      <div>
+        <label class="block text-sm font-medium mb-1" for="tutor">Tutor</label>
+        <input type="text" id="tutor" name="TUTOR" required 
+               placeholder="Ejemplo: Juan Pérez"
+               class="w-full rounded-xl border-slate-300" />
+      </div>
+
+      <!-- CORREO INSTITUCIONAL -->
+        <div>
+  <label class="block text-sm font-medium mb-1" for="correo">Correo Institucional</label>
+  <input type="email" id="correo" name="CORREO" required
+         placeholder="ejemplo@sacooliveros.edu.pe"
+         class="w-full rounded-xl border-slate-300" />
+  <p id="errorCorreo" class="text-red-500 text-sm hidden">
+    ⚠️ Solo se permite correo institucional @sacooliveros.edu.pe
+  </p>
+</div>
+
+      <!-- FECHA -->
+      <div>
+        <label class="block text-sm font-medium mb-1" for="fecha">Fecha</label>
+        <input type="date" id="fecha" name="FECHA" required 
+               class="w-full rounded-xl border-slate-300" />
+      </div>
+
+
+      <!-- SEDE -->
+      <div>
+        <label class="block text-sm font-medium mb-1" for="sede">Sede</label>
+        <select id="sede" name="SEDE" required class="w-full rounded-xl border-slate-300">
+          <option value="">Seleccionar Sede</option>
+          <option>AREQUIPA</option>
+          <option>BARRANCO</option>
+          <option>BELISARIO</option>
+          <option>BELLAVISTA</option>
+          <option>BELLIDO</option>
+          <option>CAJAMARCA</option>
+          <option>CALCA</option>
+          <option>CAMPOY</option>
+          <option>CANTA CALLAO</option>
+          <option>CARABAYLLO</option>
+          <option>CHACLACAYO</option>
+          <option>CHORRILLOS</option>
+          <option>CIPRESES</option>
+          <option>CUBA</option>
+          <option>EL AGUSTINO</option>
+          <option>EL RETABLO</option>
+          <option>EL ROSARIO</option>
+          <option>ELIO</option>
+          <option>HUAYCAN</option>
+          <option>HUANCAYO</option>
+          <option>HUARAL</option>
+          <option>ICA</option>
+          <option>INGENIEROS</option>
+          <option>JAVIER PRADO</option>
+          <option>JULIACA</option>
+          <option>LA VICTORIA</option>
+          <option>LAS PALMERAS</option>
+          <option>LINCE</option>
+          <option>LOS COCALENOS</option>
+          <option>LURIN</option>
+          <option>MIGUEL IGLESIAS</option>
+          <option>MONTERRICO</option>
+          <option>MONTESSORI</option>
+          <option>NARANJAL</option>
+          <option>PISCO</option>
+          <option>PUCALLPA</option>
+          <option>PUEBLO LIBRE</option>
+          <option>PUENTE PIEDRA</option>
+          <option>QUILCA</option>
+          <option>SALAMANCA</option>
+          <option>SAN CARLOS</option>
+          <option>SAN LUIS</option>
+          <option>SAN MIGUEL</option>
+          <option>SANTA ANITA</option>
+          <option>SORIA</option>
+          <option>TARMA</option>
+          <option>VENTANILLA</option>
+          <option>VILLA EL SALVADOR</option>
+          <option>VILLA SOL</option>
+        </select>
+      </div>
+
+      <!-- TURNO -->
+      <div>
+        <label class="block text-sm font-medium mb-1" for="turno">Turno</label>
+        <select id="turno" name="TURNO" required class="w-full rounded-xl border-slate-300">
+          <option value="">Seleccionar Turno</option>
+          <option>Mañana</option>
+          <option>Tarde</option>
+        </select>
+      </div>
+
+      <!-- GRADO -->
+      <div>
+        <label class="block text-sm font-medium mb-1" for="grado">Grado</label>
+        <select id="grado" name="GRADO" required class="w-full rounded-xl border-slate-300">
+          <option value="">Seleccionar Grado</option>
+          <option>1°</option>
+          <option>2°</option>
+          <option>3°</option>
+          <option>4°</option>
+          <option>5°</option>
+          <option>5° Pre</option>
+          <option>5° San Marcos</option>
+        </select>
+      </div>
+
+      <!-- AULA -->
+      <div>
+        <label class="block text-sm font-medium mb-1" for="aula">Aula</label>
+        <input type="text" id="aula" name="AULA" required placeholder="Ejemplo: Aula 101" class="w-full rounded-xl border-slate-300" />
+      </div>
+
+      <!-- CANTIDAD DE ESTUDIANTES -->
+      <div>
+        <label class="block text-sm font-medium mb-1" for="cantidad_estudiantes">Cantidad de estudiantes</label>
+        <input type="number" id="cantidad_estudiantes" name="CANTIDAD_ESTUDIANTES" required placeholder="Ejemplo: 30" class="w-full rounded-xl border-slate-300" />
+      </div>
+
+      <!-- SESIÓN -->
+      <div>
+        <label class="block text-sm font-medium mb-1">Sesión de Clase</label>
+        <select id="reviso" name="sesion" required class="w-full rounded-xl border-slate-300">
+          <option value="">Seleccionar</option>
+          <option>Sesión 1</option>
+          <option>Sesión 2</option>
+        </select>
+      </div>
+
+      <!-- DOCENTE -->
+      <div> <label class="block text-sm font-medium mb-1" for="docente">Docente</label> <input list="docentes" id="docente" name="DOCENTE" required class="w-full rounded-xl border-slate-300 dark:border-slate-700 dark:bg-zinc-900/60" placeholder="Escriba nombre o apellido…" /> <datalist id="docentes"> <option value="MANSILLA PÉREZ VILMA"></option> <option value="ALDAZÁBAL VALENZUELA SHIRLEY"></option> <option value="CAVALCANTI CASTILLO JEANE"></option> <option value="BULEJE CERNA FERGIE"></option> <option value="MAURIOLA GUTIERREZ JIMENA ROCIO"></option> <option value="SALAS CIEZA ANDREA CHRISTINA"></option> <option value="VIGIL TRELLES LUIS ALFREDO"></option> <option value="RAMOS GONZALES JUAN"></option> <option value="SOTO HIDALGO NANCY NELLY"></option> <option value="VÉLIZ ACOSTA MIRELLA"></option> <option value="QUISPE UGARTE ADRIANA"></option> <option value="BARBOZA DIETZ RONALD ANTONIO"></option> <option value="BRICEÑO SALAS KARIN"></option> <option value="ÁVALOS HUAPAYA MARÍA"></option> <option value="SOLIER PALOMINO, RAFAEL"></option> <option value="VALDEZ LEON ELIEZER EFRAIN"></option> <option value="CHUJUTALLI SABOYA KENY"></option> <option value="REFULIO QUISPE MARCO"></option> <option value="ACUÑA ARBAIZA JOSÉ"></option> <option value="PARIONA MENDOZA MARCO ANTONIO"></option> <option value="COPITAN HUANCHACO ANDY ANDRES"></option> <option value="CHINCHAY GUZMÁN MARILÚ"></option> <option value="VILLAVICENCIO RODRÍGUEZ DAISSY"></option> <option value="PURIZACA LUCANO GIOVANNA"></option> <option value="SANDOVAL NUÑEZ KAREN LIZBETH"></option> <option value="VALDIVIA GALARZA GRACE"></option> <option value="GALVAN HERVIAS JOSE LUIS"></option> <option value="NORIEGA CARDENAS YURY YESENNIA"></option> <option value="PALOMINO ORTIZ JANISSE LIZETTE"></option> <option value="BARRETO GONZALES RONNY"></option> <option value="CHILLCCE IBARRA ANTHONY"></option> <option value="RENGIFO GUERRA NATANAEL"></option> <option value="ARRATIA QUISPE FLORENTINA"></option> <option value="HUARINGA HUARINGA MIRIAM"></option> <option value="MARTÍNEZ TAPIA PAOLA"></option> <option value="VIVANCO ARBULU MARIELLA ROCIO"></option> <option value="SANCHEZ OQUENDO JHON JAIRO"></option> <option value="SIXI LÓPEZ YULIANA DANIA"></option> <option value="CASTRO PEREZ KARLA SHARON"></option> <option value="CHIRINOS LUCERO STEPHANIE"></option> <option value="ARTICA APACLLA LILIANA DE LOS ANGELES"></option> <option value="GENG QUIQUIN MARIA ISABEL"></option> <option value="CURICÓ GONZALES ENRIQUE"></option> <option value="VALDIVIA GARCES DE DAVILA LILIAN JANET"></option> <option value="MENDIETA FUENTES KIARA CAROLINA"></option> <option value="ROCCA VILLARREAL FERNANDO ALEXIS"></option> <option value="TUME GUARDIA DORA"></option> <option value="ESPIRITU INGA ALVARO JESUS"></option> <option value="CONTRERAS ÑAHUI WHITNNEY ROSA"></option> <option value="PURILLA PINEDO RENSO ALEXIS"></option> <option value="ARAUCO ZUÑIGA JULY ROSARIO"></option> <option value="MAURIOLA ACOSTA IRIS"></option> </datalist> </div>
+
+      <!-- REVISÓ LA ACTIVIDAD -->
+      <div>
+        <label class="block text-sm font-medium mb-1">¿Revisó la actividad?</label>
+        <select id="reviso" name="REVISO" required class="w-full rounded-xl border-slate-300">
+          <option value="">Seleccionar</option>
+          <option>Sí</option>
+          <option>No</option>
+        </select>
+      </div>
+
+      <!-- CANTIDAD REALIZARON -->
+      <div>
+        <label class="block text-sm font-medium mb-1" for="cantidad_realizaron">Cantidad de estudiantes que realizaron la actividad</label>
+        <input type="number" id="cantidad_realizaron" name="CANTIDAD_REALIZARON" required placeholder="Ejemplo: 25" class="w-full rounded-xl border-slate-300" />
+      </div>
+
+      <!-- PORCENTAJE AUTO -->
+      <div>
+        <label class="block text-sm font-medium mb-1" for="porcentaje">% de estudiantes que realizaron la actividad</label>
+        <input type="text" id="porcentaje" name="PORCENTAJE" readonly class="w-full bg-gray-100 rounded-xl border-slate-300" />
+      </div>
+
+      <!-- BOTÓN -->
+      <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-xl transition">
+        Enviar Registro
+      </button>
+    </form>
+  </div>
+
+  <script>
+    // 📌 AUTOCÁLCULO DEL PORCENTAJE
+    const totalInput = document.getElementById("cantidad_estudiantes");
+    const realizaronInput = document.getElementById("cantidad_realizaron");
+    const porcentajeInput = document.getElementById("porcentaje");
+
+    function calcularPorcentaje() {
+      let total = parseInt(totalInput.value) || 0;
+      let realizaron = parseInt(realizaronInput.value) || 0;
+      if (total > 0) {
+        let porcentaje = (realizaron / total) * 100;
+        porcentajeInput.value = porcentaje.toFixed(2) + "%";
+      } else {
+        porcentajeInput.value = "";
+      }
+    }
+
+    totalInput.addEventListener("input", calcularPorcentaje);
+    realizaronInput.addEventListener("input", calcularPorcentaje);
+
+    // 📌 ENVÍO A GOOGLE SHEETS
+    // 📌 ENVÍO A GOOGLE SHEETS CON VALIDACIÓN DE CORREO
+document.getElementById("actividadForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const correoInput = document.getElementById("correo");
+  const errorCorreo = document.getElementById("errorCorreo");
+  const correo = correoInput.value.trim();
+  const dominioValido = "@sacooliveros.edu.pe";
+
+  // ✅ Validación de correo antes de enviar
+  if (!correo.toLowerCase().endsWith(dominioValido)) {
+    errorCorreo.classList.remove("hidden");
+    correoInput.focus();
+    return; // 🚫 No envía nada si el correo no es válido
+  } else {
+    errorCorreo.classList.add("hidden");
+  }
+
+  // ✅ Si pasa la validación, recién envía
+  let form = document.getElementById("actividadForm");
+  let formData = new FormData(form);
+
+  fetch("https://script.google.com/macros/s/AKfycbw_I6S1AXMq96WQsUiCSRkGtej2Zenuy05n5fk3WcqZ4Jqw6zOKfUuRZbMR6kFB7VGsow/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.result === "success") {
+      alert("✅ Datos enviados correctamente");
+      form.reset();
+      document.getElementById("porcentaje").value = ""; // limpia el % al reiniciar
+    } else {
+      alert("❌ Error en el servidor: " + data.message);
+    }
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    alert("❌ Error de conexión: " + error);
+  });
+});
+
+  </script>
+
+</body>
+</html>
